@@ -10,9 +10,13 @@ import logging
 # read the image
 image = cv2.imread('image_2.jpg')
 directory = "channel_experiment_output"
-parent_dir = "/data/"
+parent_dir = "/opt/"
 path = os.path.join(parent_dir, directory)
-os.mkdir(path)
+if os.path.exists(path):
+    print("{} folder exists".format(directory))
+else:
+    os.mkdir(path)
+
 # B, G, R channel splitting
 blue, green, red = cv2.split(image)
 
@@ -52,3 +56,5 @@ cv2.drawContours(image=image_contour_red, contours=contours3, contourIdx=-1,
 logging.info("Generating red channel image")
 cv2.imwrite(os.path.join(path, 'red_channel.jpg'), image_contour_red)
 cv2.waitKey(0)
+print("sleeping for some time")
+time.sleep(60)
