@@ -32,7 +32,6 @@ def main():
     # see the results
     logging.info("Generating blue channel image")
     cv2.imwrite(os.path.join(path, 'blue_channel.jpg'), image_contour_blue)
-    cv2.waitKey(0)
 
     # detect contours using green channel and without thresholding
     contours2, hierarchy2 = cv2.findContours(image=green, mode=cv2.RETR_TREE, 
@@ -44,7 +43,6 @@ def main():
     # see the results
     logging.info("Generating green channel image")
     cv2.imwrite(os.path.join(path, 'green_channel.jpg'), image_contour_green)
-    cv2.waitKey(0)
 
     # detect contours using red channel and without thresholding
     contours3, hierarchy3 = cv2.findContours(image=red, mode=cv2.RETR_TREE, 
@@ -56,7 +54,6 @@ def main():
     # see the results
     logging.info("Generating red channel image")
     cv2.imwrite(os.path.join(path, 'red_channel.jpg'), image_contour_red)
-    cv2.waitKey(0)
     print("sleeping for some time")
     time.sleep(60)
 
