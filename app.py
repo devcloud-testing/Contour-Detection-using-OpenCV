@@ -10,7 +10,7 @@ import logging
 # read the image
 image = cv2.imread('image_2.jpg')
 directory = "channel_experiment_output"
-parent_dir = "/opt/"
+parent_dir = "/data/"
 path = os.path.join(parent_dir, directory)
 if os.path.exists(path):
     print("{} folder exists".format(directory))
