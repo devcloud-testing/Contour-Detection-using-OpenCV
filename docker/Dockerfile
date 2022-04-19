@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu
 USER root
 LABEL maintainer="izaidi"
 RUN apt-get update 
