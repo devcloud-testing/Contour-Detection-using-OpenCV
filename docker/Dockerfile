@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:latest
 USER root
 LABEL maintainer="izaidi"
 RUN apt-get update 
