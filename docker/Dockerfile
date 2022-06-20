@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:18.04
 USER root
 LABEL maintainer="izaidi"
 RUN apt-get update 
