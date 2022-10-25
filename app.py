@@ -55,7 +55,7 @@ def main():
     logging.info("Generating red channel image")
     cv2.imwrite(os.path.join(path, 'red_channel.jpg'), image_contour_red)
     print("sleeping for some time")
-    time.sleep(1)
+    time.sleep(2)
 
 if __name__ == '__main__':
     main()
